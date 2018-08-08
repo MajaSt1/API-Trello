@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
 @Configuration
-@ComponentScan
+
 public class CoreConfiguration extends WebMvcConfigurerAdapter {
 
     @Bean

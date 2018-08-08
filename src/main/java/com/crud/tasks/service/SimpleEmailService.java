@@ -9,6 +9,10 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
+import static java.util.Optional.ofNullable;
+
 @Service
 public class SimpleEmailService {
 
@@ -32,6 +36,8 @@ public class SimpleEmailService {
         simpleMailMessage.setTo(mail.getMailTo());
         simpleMailMessage.setSubject(mail.getSubject());
         simpleMailMessage.setText(mail.getMessage());
+        if (mail.getToCc()!=null && !mail.getToCc().isEmpty()){simpleMailMessage.setCc(mail.getToCc());}
+        else {System.out.println("no other recipient");}
         return simpleMailMessage;
     }
 }

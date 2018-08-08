@@ -38,7 +38,7 @@ dependencies {
     compile('net.minidev:asm:1.0.2')
     compile('org.slf4j:slf4j-api:1.7.10')
     compile('com.jayway.jsonpath:json-path:2.0.0')
-    // http://mvnrepository.com/artifact/postgresql/postgresql
+    // http:mvnrepository.com/artifact/postgresql/postgresql
      compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
 
     // outside Tomcat

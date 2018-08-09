@@ -1,17 +1,15 @@
-package com.crud.tasks;
+package com.crud.tasks.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.crud.tasks.controller"})
 public class TasksApplication /* extends SpringBootServletInitializer */ {
 
     public static void main(String[] args) { SpringApplication.run(TasksApplication.class, args); }
 
  /*  @Override
     protected SpringApplicationBuilder configure (SpringApplicationBuilder application) {
-        return application.sources(TasksApplication.class);
+        return application.sources(com.crud.tasks.app.TasksApplication.class);
     } */
 }

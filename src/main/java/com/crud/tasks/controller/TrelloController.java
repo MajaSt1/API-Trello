@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
@@ -16,6 +17,7 @@ import java.util.List;
 @RequestMapping("/v1/trello")
 
 public class TrelloController {
+    @Resource(name = "trelloService")
     @Autowired
     private TrelloService trelloService;
 

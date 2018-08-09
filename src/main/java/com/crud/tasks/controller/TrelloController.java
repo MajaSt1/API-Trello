@@ -6,6 +6,7 @@ import com.crud.tasks.domain.createdTrelloCard;
 import com.crud.tasks.service.TrelloService;
 import com.crud.tasks.trello.client.TrelloClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/v1/trello")
+@ComponentScan(basePackages = {"com.crud.tasks.service"})
 public class TrelloController {
     @Autowired
     private TrelloService trelloService;

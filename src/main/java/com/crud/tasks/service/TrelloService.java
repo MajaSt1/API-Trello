@@ -9,10 +9,12 @@ import com.crud.tasks.trello.config.AdminConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 import static java.util.Optional.ofNullable;
 
+@Transactional
 @Service
 public class TrelloService {
 

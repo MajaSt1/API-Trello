@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/v1/trello")
 
 public class TrelloController {
-    @Resource(name = "trelloService")
+
     @Autowired
     private TrelloService trelloService;
 

@@ -14,7 +14,7 @@ import java.util.List;
 
 import static java.util.Optional.ofNullable;
 
-@Transactional
+
 @Service
 public class TrelloService {
 

@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/v1/trello")
-@ComponentScan(basePackages = {"com.crud.tasks.service"})
+
 public class TrelloController {
     @Autowired
     private TrelloService trelloService;

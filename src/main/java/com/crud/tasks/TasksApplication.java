@@ -1,4 +1,4 @@
-package com.crud.tasks.app;
+package com.crud.tasks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,6 +10,6 @@ public class TasksApplication /* extends SpringBootServletInitializer */ {
 
  /*  @Override
     protected SpringApplicationBuilder configure (SpringApplicationBuilder application) {
-        return application.sources(com.crud.tasks.app.TasksApplication.class);
+        return application.sources(com.crud.tasks.TasksApplication.class);
     } */
 }

@@ -34,6 +34,7 @@ dependencies {
     compile('io.springfox:springfox-swagger2:2.7.0')
     compile('io.springfox:springfox-swagger-ui:2.7.0')
 
+    compile group: 'net.java.dev.inflector', name: 'inflector', version: '0.7.0'
     compile('net.minidev:json-smart:2.1.1')
     compile('net.minidev:asm:1.0.2')
     compile('org.slf4j:slf4j-api:1.7.10')

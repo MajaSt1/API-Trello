@@ -14,7 +14,7 @@ import java.util.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MapTestSuite {
+public class TrelloMapperTestSuite {
 
     @Autowired
     private TrelloMapper trelloMapper;

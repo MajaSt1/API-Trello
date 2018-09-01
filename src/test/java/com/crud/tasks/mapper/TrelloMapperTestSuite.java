@@ -1,6 +1,6 @@
 package com.crud.tasks.mapper;
 
-import com.crud.tasks.domain.*;
+/*import com.crud.tasks.domain.*;
 
 import static org.junit.Assert.*;
 
@@ -78,4 +78,4 @@ public class TrelloMapperTestSuite {
         assertEquals("CardDto",trelloCard.getDescription());
 
     }
-}
+}*/

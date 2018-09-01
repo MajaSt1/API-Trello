@@ -4,7 +4,6 @@ import com.crud.tasks.domain.Mail;
 import com.crud.tasks.repository.TaskRepository;
 import com.crud.tasks.service.SimpleEmailService;
 import com.crud.tasks.trello.config.AdminConfig;
-import org.jvnet.inflector.Noun;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -23,12 +22,14 @@ public class EmailScheduler {
 
     @Scheduled(fixedDelay = 10000)
     public void sendInformationEmail(){
+
         long size= taskRepository.count();
+        String taskWord = size == 1 ? "task" : "tasks";
+
         simpleEmailService.send(new Mail(
                 adminConfig.getAdminMail(),
                 SUBJECT,
-                "Currently in database you got: " + size +
-                        Noun.pluralOf("task" , Math.toIntExact(size)),
+                taskWord,
                 "")
         );
     }

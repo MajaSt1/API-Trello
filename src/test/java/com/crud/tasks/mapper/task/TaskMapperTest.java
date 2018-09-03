@@ -1,5 +1,6 @@
 package com.crud.tasks.mapper.task;
 
+import com.crud.tasks.TasksApplication;
 import com.crud.tasks.domain.Task;
 import com.crud.tasks.domain.TaskDto;
 import com.crud.tasks.mapper.TaskMapper;
@@ -18,7 +19,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-/*@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskMapperTest {
     @Autowired
@@ -53,4 +54,3 @@ public class TaskMapperTest {
         assertEquals(1,taskDtos.size());
     }
 }
-*/

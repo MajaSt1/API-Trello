@@ -29,7 +29,7 @@ public class EmailScheduler {
         simpleEmailService.send(new Mail(
                 adminConfig.getAdminMail(),
                 SUBJECT,
-                taskWord,
+                "Currently in database you got: " + size + taskWord,
                 "")
         );
     }

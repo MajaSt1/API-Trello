@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.CrudRepository;
 
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,6 +20,7 @@ public interface TaskRepository extends CrudRepository<Task,Long> {
     Optional<Task> findById(Long id);
 
     @Modifying
+    @Transactional
     void deleteById(Long id);
 
     @Override

@@ -25,17 +25,17 @@ public class TaskController {
     public List<TaskDto> getTasks() { return taskFacade.getDbTasks(); }
 
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
-    public TaskDto getTask(@RequestParam(value = "id", required = false) Long taskId) throws TaskNotFoundException {
+    public TaskDto getTask(@RequestParam(value = "taskId", required = true) Long taskId) throws TaskNotFoundException {
         return taskFacade.getDbTask(taskId);
     } //*******
 
     @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
-    public void deleteTask(@RequestParam(value = "id", required = false) Long taskId) {
+    public void deleteTask(@RequestParam(value = "taskId", required = true) Long taskId) {
         taskFacade.deleteDbTask(taskId);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
-    public TaskDto updateTask(@RequestParam(value = "id") Long taskId, @RequestBody TaskDto taskDto) {
+    public TaskDto updateTask(@RequestParam(value = "taskId") Long taskId, @RequestBody TaskDto taskDto) {
         return taskFacade.updateDbTask(taskId,taskDto);
     }
 

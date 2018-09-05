@@ -1,6 +1,7 @@
 package com.crud.tasks.repository;
 
 import com.crud.tasks.domain.Task;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.CrudRepository;
 
 
@@ -11,12 +12,12 @@ public interface TaskRepository extends CrudRepository<Task,Long> {
     @Override
     List<Task> findAll();
 
-   @Override
+    @Override
     Task save( Task task);
 
-   // @Override
+    // @Override
     Optional<Task> findById(Long id);
-
+    @Modifying
     void deleteById(Long id);
 
     @Override

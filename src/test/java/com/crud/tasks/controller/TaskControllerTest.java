@@ -65,7 +65,7 @@ public class TaskControllerTest {
 
         when(taskFacade.getDbTask(anyLong())).thenReturn(taskDto);
         //When & Then
-        mockMvc.perform(get("/v1/task/getTask").contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/v1/task/getTask?taskId=1").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id",is(1)))
                 .andExpect(jsonPath("$.title",is("task")))
@@ -76,7 +76,7 @@ public class TaskControllerTest {
     public void deleteTaskTest() throws Exception {
         //
         mockMvc.perform(MockMvcRequestBuilders
-        .delete("/v1/task/deleteTask?id=1")
+        .delete("/v1/task/deleteTask?taskId=1")
         .contentType(MediaType.APPLICATION_JSON)
         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
@@ -91,7 +91,7 @@ public class TaskControllerTest {
         Gson gson=new Gson();
         String jsonContent= gson.toJson(taskDto);
 
-        mockMvc.perform(put("/v1/task/updateTask?id=1").contentType(MediaType.APPLICATION_JSON)
+        mockMvc.perform(put("/v1/task/updateTask?taskId=1").contentType(MediaType.APPLICATION_JSON)
                 .characterEncoding("UTF-8")
                 .content(jsonContent))
                 .andExpect(status().isOk())

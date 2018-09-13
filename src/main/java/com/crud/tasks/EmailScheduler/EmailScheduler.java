@@ -20,10 +20,10 @@ public class EmailScheduler {
 
     private static final String SUBJECT="Tasks: Once a day email";
 
-   @Scheduled(fixedDelay = 10000)
+   @Scheduled(cron= "0 0 6,19 * * *")
     public void sendInformationEmail(){
 
-        long size= taskRepository.count();
+       long size= taskRepository.count();
         String taskWord = size == 1 ? "task" : "tasks";
 
         simpleEmailService.send(new Mail(

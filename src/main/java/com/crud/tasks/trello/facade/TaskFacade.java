@@ -28,8 +28,7 @@ public class TaskFacade {
 
     public void deleteDbTask(final Long taskId) { service.deleteTaskById(taskId); }
 
-    public TaskDto updateDbTask(final Long taskId,final TaskDto taskDto) {
-        taskDto.setId(taskId);
+    public TaskDto updateDbTask(final TaskDto taskDto) {
         return taskMapper.mapToTaskDto(service.saveTask(taskMapper.mapToTask(taskDto))); }
 
     public Task createDbTask(final TaskDto taskDto){ return service.saveTask (taskMapper.mapToTask ( taskDto)); }
